@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$installDirectory = C:/
+$installDirectory = 'C:\shorebird'
 
 function Test-GitInstalled {
     if (Get-Command git -ErrorAction SilentlyContinue) {
