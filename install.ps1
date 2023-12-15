@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$installDirectory = [IO.Path]::Combine($home, ".shorebird")
+$installDirectory = C:/
 
 function Test-GitInstalled {
     if (Get-Command git -ErrorAction SilentlyContinue) {
@@ -67,7 +67,7 @@ $force = $args -contains "--force"
 if (Test-Path $installDirectory) {
     if ($force) {
         Write-Output "Existing Shorebird installation detected. Overwriting..."
-        Remove-Item -Recurse -Force C:/
+        Remove-Item -Recurse -Force $installDirectory
     }
     else {
         Write-Output "Error: Existing Shorebird installation detected. Use --force to overwrite."
